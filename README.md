@@ -91,8 +91,50 @@ python3 evaluate.py --model-name [MODEL_NAME] \
     - `"thenlper/gte-small"`
 - Adjust the `--batch-size` parameter if necessary to accommodate hardware constraints.
 
-## TODO 
-- [ ] The training script of CmdCaliper.
+## Training Scripts of CmdCaliper
+We provide the training scripts with the configs of CmdCaliper reported in our paper. 
+
+### Training Command
+```
+python3 train.py \
+    --temperature 0.05 \
+    --lr 0.00002 \
+    --path-to-checkpoint-dir ./checkpoints \
+    --path-to-train-data-dir ./data/train_data \
+    --path_to_eval_data_dir ./data/eval_data \
+    --path-to-model-weight thenlper/gte-small \
+    --epochs 2
+```
+
+### Data Preparation
+You need to prepare a `data.json` file for both your training and evaluation datasets. Place these files in the directories specified by `--path-to-train-data-dir` and `--path-to-eval-data-dir`. In our paper, we extracted 1,000 command line pairs from the training data to serve as the evaluation dataset.
+
+Please make sure the data in `data.json` follow this format:
+```
+[
+  [cmd1, positive_cmd1],
+  [cmd2, positive_cmd2],
+  [cmd3, positive_cmd3],
+  [cmd4, positive_cmd4],
+  ...
+]
+```
+
+#### Automatic Evaluation Split
+
+You can also automatically split your training data into training and evaluation datasets by using the `--train-percentage` argument. Note that this will result in a different evaluation dataset for each training session.
+
+## Checkpoints
+
+During training, the following will be saved in the directory specified by `--path-to-checkpoint-dir`:
+
+- Model weights
+- Optimizer state
+- Learning rate scheduler state
+
+These files allow you to resume training if needed. Additionally, a `huggingface_model` directory will be created, containing the model weights in Transformers style.
+
+
 
 ## Citation
 ```
