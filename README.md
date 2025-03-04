@@ -139,9 +139,11 @@ These files allow you to resume training if needed. Additionally, a `huggingface
 ## Citation
 ```
 @inproceedings{huang2024cmdcaliper,
-  title={CmdCaliper: A Semantic-Aware Command-Line Embedding Model and Dataset for Security Research},
-  author={SianYao Huang, ChengLin Yang, CheYu Lin, and ChunYing Huang},
-  booktitle={Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing,
+  title={{C}md{C}aliper: A Semantic-Aware Command-Line Embedding Model and Dataset for Security Research},
+  author={Sian-Yao Huang and Cheng-Lin Yang and Che-Yu Lin and Chun-Ying Huang},
+  booktitle={Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages = "20188--20206",
+  month = nov,
   year={2024}
 } 
 ```
